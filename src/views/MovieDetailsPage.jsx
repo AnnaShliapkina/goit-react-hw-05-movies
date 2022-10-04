@@ -14,7 +14,8 @@ import {
   Button,
   List,
   Item,
-  LinkWrapper,
+  Wrapper,
+  Text,
 } from 'components/MovieDetailsPage/MovieDetailsPage.styled';
 
 const Cast = lazy(() => import('../views/Cast'));
@@ -55,23 +56,25 @@ const MovieDetailsPage = () => {
           <List>
             <Item>
               <h2>{`${movie.title} (${movie.release_date.slice(0, 4)})`}</h2>
-              <p>{`User Score: ${Math.round(movie.vote_average * 10)}%`}</p>
+              <Text>{`User Score: ${Math.round(
+                movie.vote_average * 10
+              )}%`}</Text>
             </Item>
             <Item>
               <h3>Overview</h3>
-              <p>{movie.overview}</p>
+              <Text>{movie.overview}</Text>
             </Item>
             <Item>
               <h3>Genres</h3>
-              <p>{movie.genres.map(genre => genre.name).join(' ')}</p>
+              <Text>{movie.genres.map(genre => genre.name).join(' ')}</Text>
             </Item>
           </List>
         </Container>
-        <LinkWrapper>
+        <Wrapper>
           <h3>Additional information</h3>
           <Link to="cast">Cast</Link>
           <Link to="reviews">Reviews</Link>
-        </LinkWrapper>
+        </Wrapper>
         <Suspense fallback={<p>Loading...</p>}>
           <Routes>
             <Route path="cast" element={<Cast />} />

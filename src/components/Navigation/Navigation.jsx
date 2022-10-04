@@ -1,12 +1,18 @@
-import { Link, Container } from './Navigation.styled';
+import { Link, Container, Header } from './Navigation.styled';
 
 export const Navigation = () => {
   return (
-    <>
-      <Container>
-        <Link to="/">Home</Link>
-        <Link to="movies">Movies</Link>
-      </Container>
-    </>
+    <Container>
+      <Header>
+        <nav>
+          <Link className="Link" to="/">
+            Home
+          </Link>
+          <Link className="Link" to="movies">
+            Movies
+          </Link>
+        </nav>
+      </Header>
+    </Container>
   );
 };

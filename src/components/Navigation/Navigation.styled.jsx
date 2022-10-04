@@ -1,23 +1,33 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
-export const Container = styled.div`
+export const Header = styled.header`
   display: flex;
   align-items: center;
-  width: 100%;
-  padding-left: 100px;
-  border-bottom: 1px solid black;
-  height: 70px;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  margin-bottom: 16px;
+  > nav {
+    display: flex;
+  }
+`;
+
+export const Container = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
 `;
 
 export const Link = styled(NavLink)`
-  width: 120px;
+  padding: 8px 16px;
+  border-radius: 4px;
   text-decoration: none;
-  font-size: 30px;
-  font-weight: 500px;
   color: black;
+  font-weight: 500;
 
   &.active {
     color: orange;
+    background-color: aliceblue;
   }
 `;

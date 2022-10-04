@@ -1,11 +1,15 @@
 import PropTypes from 'prop-types';
+import {
+  ReviewAuthor,
+  ReviewBox,
+} from 'components/ReviewCard/ReviewCard.styled';
 
-export const ReviewCard = ({ reviw: { author, content } }) => {
+export const ReviewCard = ({ review: { author, content } }) => {
   return (
-    <li>
-      <h3>{`Author:${author}`}</h3>
+    <ReviewBox>
+      <ReviewAuthor>{`Author:${author}`}</ReviewAuthor>
       <p>{content}</p>
-    </li>
+    </ReviewBox>
   );
 };
 

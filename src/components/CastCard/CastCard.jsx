@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
+import { CardImage, CastCharacter, CastActor } from './CardCast.styled';
 
 export const CastCard = ({ oneCast: { name, character, profile_path } }) => {
   return (
     <li>
-      <img
-        width={100}
+      <CastCharacter>{`Character: ${character}`}</CastCharacter>
+      <CardImage
         src={
           profile_path
             ? `https://image.tmdb.org/t/p/w200/${profile_path}`
@@ -12,8 +13,7 @@ export const CastCard = ({ oneCast: { name, character, profile_path } }) => {
         }
         alt=""
       />
-      <p>{name}</p>
-      <p>{`Character: ${character}`}</p>
+      <CastActor>{name}</CastActor>
     </li>
   );
 };

@@ -5,11 +5,11 @@ import { CastCard } from 'components/CastCard/CastCard';
 
 const Cast = () => {
   const [cast, setCast] = useState(null);
-  let { moveId } = useParams();
+  let { movieId } = useParams();
 
   useEffect(() => {
-    API.getCast(moveId).then(r => setCast(r));
-  }, [moveId]);
+    API.getCast(movieId).then(r => setCast(r));
+  }, [movieId]);
 
   return (
     <ul>

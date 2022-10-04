@@ -1,23 +1,23 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 export const Container = styled.div`
   display: flex;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid black;
+  padding: 10px 50px;
 `;
 
 export const Button = styled.button`
+  margin: 10px;
+  margin-left: 150px;
   height: 30px;
   width: 90px;
-  font-size: 16px;
+
   font-weight: 700;
+  background-color: aliceblue;
 `;
 
 export const List = styled.ul`
   list-style: none;
+  width: 600px;
 `;
 
 export const Item = styled.li`
@@ -27,9 +27,13 @@ export const Item = styled.li`
   height: 100px;
 `;
 
-export const LinkWrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  border-bottom: 1px solid black;
+  padding: 30px;
+  padding-left: 50px;
+`;
+
+export const Text = styled.p`
+  margin-top: 0px;
 `;

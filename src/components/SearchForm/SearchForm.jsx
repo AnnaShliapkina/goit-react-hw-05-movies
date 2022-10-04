@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import { Form } from 'components/SearchForm/SearchForm.styled';
 
 export const SearchForm = () => {
   let [searchParams, setSearchParams] = useSearchParams();
@@ -20,10 +21,10 @@ export const SearchForm = () => {
 
   return (
     <div>
-      <form action="" onSubmit={handleSubmit}>
+      <Form action="" onSubmit={handleSubmit}>
         <input ref={inputForm} type="text" name="search" />
         <button type="submit">Search</button>
-      </form>
+      </Form>
     </div>
   );
 };
